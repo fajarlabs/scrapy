@@ -22,3 +22,6 @@ scrapy runspider toscrape.py <br />
 Log & output results in this picture
 
 ![alt text](https://image.ibb.co/bANsD9/scrapy.png)
+<br />
+
+![alt text](https://image.ibb.co/mT5Mqp/examplelog.png)
