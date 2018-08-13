@@ -8,7 +8,10 @@ Python 3.6 <br >
 # How to start project scrapy
 https://doc.scrapy.org/en/latest/intro/tutorial.html <br >
  
-scrapy startproject tutorial <br >
+=================================================<b />
+For first project <br />
+<b>scrapy startproject tutorial</b> <br >
+=================================================<b />
 
 and go to folder, <br >
 cd tutorial/spiders <br >
