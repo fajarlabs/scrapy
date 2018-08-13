@@ -8,12 +8,12 @@ Python 3.6
 # How to start project scrapy
 https://doc.scrapy.org/en/latest/intro/tutorial.html
 
-scrapy startproject tutorial
+scrapy startproject tutorial <br >
 
-and go to folder,
-cd tutorial/spiders
+and go to folder, <br >
+cd tutorial/spiders <br >
 
-example like this one, how to run this script.
+example like this one, how to run this script. <br >
 scrapy runspider toscrape.py
 
 
