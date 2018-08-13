@@ -15,3 +15,6 @@ cd tutorial/spiders
 
 example like this one, how to run this script.
 scrapy runspider toscrape.py
+
+
+![alt text](https://image.ibb.co/bANsD9/scrapy.png)
