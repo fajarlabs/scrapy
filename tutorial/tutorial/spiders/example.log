@@ -29,35 +29,1208 @@ INFO:scrapy.middleware:Enabled item pipelines:
 INFO:scrapy.core.engine:Spider opened
 INFO:scrapy.extensions.logstats:Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
 DEBUG:scrapy.extensions.telnet:Telnet console listening on 127.0.0.1:6023
-DEBUG:scrapy.core.engine:Crawled (404) <GET http://quotes.toscrape.com/robots.txt> (referer: None)
-DEBUG:scrapy.core.engine:Crawled (200) <GET http://quotes.toscrape.com/page/1/> (referer: None)
-DEBUG:root:This message should appear on the console
-INFO:root:So should this
-WARNING:root:And this, too
-DEBUG:toscrape:Saved file quotes-1.html
-DEBUG:scrapy.core.engine:Crawled (200) <GET http://quotes.toscrape.com/page/2/> (referer: None)
-DEBUG:root:This message should appear on the console
-INFO:root:So should this
-WARNING:root:And this, too
-DEBUG:toscrape:Saved file quotes-2.html
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.detik.com/robots.txt> (referer: None)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.detik.com/search/searchall?query=kapal+tenggelam> (referer: None)
+INFO:root:[]
 INFO:scrapy.core.engine:Closing spider (finished)
 INFO:scrapy.statscollectors:Dumping Scrapy stats:
-{'downloader/request_bytes': 678,
- 'downloader/request_count': 3,
- 'downloader/request_method_count/GET': 3,
- 'downloader/response_bytes': 5976,
- 'downloader/response_count': 3,
+{'downloader/request_bytes': 472,
+ 'downloader/request_count': 2,
+ 'downloader/request_method_count/GET': 2,
+ 'downloader/response_bytes': 6906,
+ 'downloader/response_count': 2,
  'downloader/response_status_count/200': 2,
- 'downloader/response_status_count/404': 1,
  'finish_reason': 'finished',
- 'finish_time': datetime.datetime(2018, 8, 13, 6, 28, 5, 117156),
- 'log_count/DEBUG': 8,
- 'log_count/INFO': 9,
- 'log_count/WARNING': 2,
- 'response_received_count': 3,
- 'scheduler/dequeued': 2,
- 'scheduler/dequeued/memory': 2,
- 'scheduler/enqueued': 2,
- 'scheduler/enqueued/memory': 2,
- 'start_time': datetime.datetime(2018, 8, 13, 6, 28, 4, 212355)}
+ 'finish_time': datetime.datetime(2018, 8, 13, 7, 26, 41, 977306),
+ 'log_count/DEBUG': 3,
+ 'log_count/INFO': 8,
+ 'response_received_count': 2,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2018, 8, 13, 7, 26, 41, 790105)}
+INFO:scrapy.core.engine:Spider closed (finished)
+INFO:scrapy.utils.log:Scrapy 1.5.0 started (bot: tutorial)
+INFO:scrapy.utils.log:Versions: lxml 4.2.1.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.0, w3lib 1.19.0, Twisted 17.5.0, Python 3.6.5 |Anaconda custom (32-bit)| (default, Mar 29 2018, 13:23:52) [MSC v.1900 32 bit (Intel)], pyOpenSSL 18.0.0 (OpenSSL 1.0.2o  27 Mar 2018), cryptography 2.2.2, Platform Windows-7-6.1.7601-SP1
+INFO:scrapy.crawler:Overridden settings: {'BOT_NAME': 'tutorial', 'NEWSPIDER_MODULE': 'tutorial.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_LOADER_WARN_ONLY': True, 'SPIDER_MODULES': ['tutorial.spiders']}
+INFO:scrapy.middleware:Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+INFO:scrapy.middleware:Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+INFO:scrapy.middleware:Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+INFO:scrapy.middleware:Enabled item pipelines:
+[]
+INFO:scrapy.core.engine:Spider opened
+INFO:scrapy.extensions.logstats:Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+DEBUG:scrapy.extensions.telnet:Telnet console listening on 127.0.0.1:6023
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.detik.com/robots.txt> (referer: None)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.detik.com/search/searchall?query=kapal+tenggelam> (referer: None)
+INFO:root:<Selector xpath="//div[contains(@class,'container') and contains(@class,'content')]" data='<div class="container content">\n        '>
+INFO:scrapy.core.engine:Closing spider (finished)
+INFO:scrapy.statscollectors:Dumping Scrapy stats:
+{'downloader/request_bytes': 472,
+ 'downloader/request_count': 2,
+ 'downloader/request_method_count/GET': 2,
+ 'downloader/response_bytes': 6366,
+ 'downloader/response_count': 2,
+ 'downloader/response_status_count/200': 2,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2018, 8, 13, 7, 28, 3, 690249),
+ 'log_count/DEBUG': 3,
+ 'log_count/INFO': 8,
+ 'response_received_count': 2,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2018, 8, 13, 7, 28, 2, 239447)}
+INFO:scrapy.core.engine:Spider closed (finished)
+INFO:scrapy.utils.log:Scrapy 1.5.0 started (bot: tutorial)
+INFO:scrapy.utils.log:Versions: lxml 4.2.1.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.0, w3lib 1.19.0, Twisted 17.5.0, Python 3.6.5 |Anaconda custom (32-bit)| (default, Mar 29 2018, 13:23:52) [MSC v.1900 32 bit (Intel)], pyOpenSSL 18.0.0 (OpenSSL 1.0.2o  27 Mar 2018), cryptography 2.2.2, Platform Windows-7-6.1.7601-SP1
+INFO:scrapy.crawler:Overridden settings: {'BOT_NAME': 'tutorial', 'NEWSPIDER_MODULE': 'tutorial.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_LOADER_WARN_ONLY': True, 'SPIDER_MODULES': ['tutorial.spiders']}
+INFO:scrapy.middleware:Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+INFO:scrapy.middleware:Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+INFO:scrapy.middleware:Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+INFO:scrapy.middleware:Enabled item pipelines:
+[]
+INFO:scrapy.core.engine:Spider opened
+INFO:scrapy.extensions.logstats:Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+DEBUG:scrapy.extensions.telnet:Telnet console listening on 127.0.0.1:6023
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.detik.com/robots.txt> (referer: None)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.detik.com/search/searchall?query=kapal+tenggelam> (referer: None)
+INFO:root:<Selector xpath="//div[contains(@class,'container') and contains(@class,'content')]" data='<div class="container content">\n        '>
+INFO:scrapy.core.engine:Closing spider (finished)
+INFO:scrapy.statscollectors:Dumping Scrapy stats:
+{'downloader/request_bytes': 472,
+ 'downloader/request_count': 2,
+ 'downloader/request_method_count/GET': 2,
+ 'downloader/response_bytes': 6369,
+ 'downloader/response_count': 2,
+ 'downloader/response_status_count/200': 2,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2018, 8, 13, 7, 30, 37, 413919),
+ 'log_count/DEBUG': 3,
+ 'log_count/INFO': 8,
+ 'response_received_count': 2,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2018, 8, 13, 7, 30, 35, 916317)}
+INFO:scrapy.core.engine:Spider closed (finished)
+INFO:scrapy.utils.log:Scrapy 1.5.0 started (bot: tutorial)
+INFO:scrapy.utils.log:Versions: lxml 4.2.1.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.0, w3lib 1.19.0, Twisted 17.5.0, Python 3.6.5 |Anaconda custom (32-bit)| (default, Mar 29 2018, 13:23:52) [MSC v.1900 32 bit (Intel)], pyOpenSSL 18.0.0 (OpenSSL 1.0.2o  27 Mar 2018), cryptography 2.2.2, Platform Windows-7-6.1.7601-SP1
+INFO:scrapy.crawler:Overridden settings: {'BOT_NAME': 'tutorial', 'NEWSPIDER_MODULE': 'tutorial.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_LOADER_WARN_ONLY': True, 'SPIDER_MODULES': ['tutorial.spiders']}
+INFO:scrapy.middleware:Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+INFO:scrapy.middleware:Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+INFO:scrapy.middleware:Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+INFO:scrapy.middleware:Enabled item pipelines:
+[]
+INFO:scrapy.core.engine:Spider opened
+INFO:scrapy.extensions.logstats:Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+DEBUG:scrapy.extensions.telnet:Telnet console listening on 127.0.0.1:6023
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.detik.com/robots.txt> (referer: None)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.detik.com/search/searchall?query=kapal+tenggelam> (referer: None)
+ERROR:scrapy.core.scraper:Spider error processing <GET https://www.detik.com/search/searchall?query=kapal+tenggelam> (referer: None)
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda2\envs\py36\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\scrappy\tutorial\tutorial\spiders\detik.py", line 16, in parse
+    self.html_file.write(response.body.decode("utf-8"))
+AttributeError: 'DetikSpider' object has no attribute 'html_file'
+INFO:scrapy.core.engine:Closing spider (finished)
+INFO:scrapy.statscollectors:Dumping Scrapy stats:
+{'downloader/request_bytes': 472,
+ 'downloader/request_count': 2,
+ 'downloader/request_method_count/GET': 2,
+ 'downloader/response_bytes': 6365,
+ 'downloader/response_count': 2,
+ 'downloader/response_status_count/200': 2,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2018, 8, 13, 7, 31, 39, 720429),
+ 'log_count/DEBUG': 3,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 7,
+ 'response_received_count': 2,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'spider_exceptions/AttributeError': 1,
+ 'start_time': datetime.datetime(2018, 8, 13, 7, 31, 39, 424028)}
+INFO:scrapy.core.engine:Spider closed (finished)
+INFO:scrapy.utils.log:Scrapy 1.5.0 started (bot: tutorial)
+INFO:scrapy.utils.log:Versions: lxml 4.2.1.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.0, w3lib 1.19.0, Twisted 17.5.0, Python 3.6.5 |Anaconda custom (32-bit)| (default, Mar 29 2018, 13:23:52) [MSC v.1900 32 bit (Intel)], pyOpenSSL 18.0.0 (OpenSSL 1.0.2o  27 Mar 2018), cryptography 2.2.2, Platform Windows-7-6.1.7601-SP1
+INFO:scrapy.crawler:Overridden settings: {'BOT_NAME': 'tutorial', 'NEWSPIDER_MODULE': 'tutorial.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_LOADER_WARN_ONLY': True, 'SPIDER_MODULES': ['tutorial.spiders']}
+INFO:scrapy.middleware:Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+INFO:scrapy.middleware:Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+INFO:scrapy.middleware:Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+INFO:scrapy.middleware:Enabled item pipelines:
+[]
+INFO:scrapy.core.engine:Spider opened
+INFO:scrapy.extensions.logstats:Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+DEBUG:scrapy.extensions.telnet:Telnet console listening on 127.0.0.1:6023
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.detik.com/robots.txt> (referer: None)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.detik.com/search/searchall?query=kapal+tenggelam> (referer: None)
+ERROR:scrapy.core.scraper:Spider error processing <GET https://www.detik.com/search/searchall?query=kapal+tenggelam> (referer: None)
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda2\envs\py36\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\scrappy\tutorial\tutorial\spiders\detik.py", line 16, in parse
+    span = Selector(text=body).xpath('//span/text()').extract()
+NameError: name 'body' is not defined
+INFO:scrapy.core.engine:Closing spider (finished)
+INFO:scrapy.statscollectors:Dumping Scrapy stats:
+{'downloader/request_bytes': 472,
+ 'downloader/request_count': 2,
+ 'downloader/request_method_count/GET': 2,
+ 'downloader/response_bytes': 6366,
+ 'downloader/response_count': 2,
+ 'downloader/response_status_count/200': 2,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2018, 8, 13, 7, 38, 39, 115566),
+ 'log_count/DEBUG': 3,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 7,
+ 'response_received_count': 2,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'spider_exceptions/NameError': 1,
+ 'start_time': datetime.datetime(2018, 8, 13, 7, 38, 37, 664763)}
+INFO:scrapy.core.engine:Spider closed (finished)
+INFO:scrapy.utils.log:Scrapy 1.5.0 started (bot: tutorial)
+INFO:scrapy.utils.log:Versions: lxml 4.2.1.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.0, w3lib 1.19.0, Twisted 17.5.0, Python 3.6.5 |Anaconda custom (32-bit)| (default, Mar 29 2018, 13:23:52) [MSC v.1900 32 bit (Intel)], pyOpenSSL 18.0.0 (OpenSSL 1.0.2o  27 Mar 2018), cryptography 2.2.2, Platform Windows-7-6.1.7601-SP1
+INFO:scrapy.crawler:Overridden settings: {'BOT_NAME': 'tutorial', 'NEWSPIDER_MODULE': 'tutorial.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_LOADER_WARN_ONLY': True, 'SPIDER_MODULES': ['tutorial.spiders']}
+INFO:scrapy.middleware:Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+INFO:scrapy.middleware:Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+INFO:scrapy.middleware:Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+INFO:scrapy.middleware:Enabled item pipelines:
+[]
+INFO:scrapy.core.engine:Spider opened
+INFO:scrapy.extensions.logstats:Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+DEBUG:scrapy.extensions.telnet:Telnet console listening on 127.0.0.1:6023
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.detik.com/robots.txt> (referer: None)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.detik.com/search/searchall?query=kapal+tenggelam> (referer: None)
+ERROR:scrapy.core.scraper:Spider error processing <GET https://www.detik.com/search/searchall?query=kapal+tenggelam> (referer: None)
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda2\envs\py36\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\scrappy\tutorial\tutorial\spiders\detik.py", line 17, in parse
+    span = Selector(text=body).xpath('//span/text()').extract()
+NameError: name 'body' is not defined
+INFO:scrapy.core.engine:Closing spider (finished)
+INFO:scrapy.statscollectors:Dumping Scrapy stats:
+{'downloader/request_bytes': 472,
+ 'downloader/request_count': 2,
+ 'downloader/request_method_count/GET': 2,
+ 'downloader/response_bytes': 6365,
+ 'downloader/response_count': 2,
+ 'downloader/response_status_count/200': 2,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2018, 8, 13, 7, 39, 37, 241268),
+ 'log_count/DEBUG': 3,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 7,
+ 'response_received_count': 2,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'spider_exceptions/NameError': 1,
+ 'start_time': datetime.datetime(2018, 8, 13, 7, 39, 36, 898067)}
+INFO:scrapy.core.engine:Spider closed (finished)
+INFO:scrapy.utils.log:Scrapy 1.5.0 started (bot: tutorial)
+INFO:scrapy.utils.log:Versions: lxml 4.2.1.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.0, w3lib 1.19.0, Twisted 17.5.0, Python 3.6.5 |Anaconda custom (32-bit)| (default, Mar 29 2018, 13:23:52) [MSC v.1900 32 bit (Intel)], pyOpenSSL 18.0.0 (OpenSSL 1.0.2o  27 Mar 2018), cryptography 2.2.2, Platform Windows-7-6.1.7601-SP1
+INFO:scrapy.crawler:Overridden settings: {'BOT_NAME': 'tutorial', 'NEWSPIDER_MODULE': 'tutorial.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_LOADER_WARN_ONLY': True, 'SPIDER_MODULES': ['tutorial.spiders']}
+INFO:scrapy.middleware:Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+INFO:scrapy.middleware:Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+INFO:scrapy.middleware:Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+INFO:scrapy.middleware:Enabled item pipelines:
+[]
+INFO:scrapy.core.engine:Spider opened
+INFO:scrapy.extensions.logstats:Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+DEBUG:scrapy.extensions.telnet:Telnet console listening on 127.0.0.1:6023
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.detik.com/robots.txt> (referer: None)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.detik.com/search/searchall?query=kapal+tenggelam> (referer: None)
+ERROR:scrapy.core.scraper:Spider error processing <GET https://www.detik.com/search/searchall?query=kapal+tenggelam> (referer: None)
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda2\envs\py36\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\scrappy\tutorial\tutorial\spiders\detik.py", line 19, in parse
+    span = Selector(text=body).xpath('//span/text()').extract()
+NameError: name 'body' is not defined
+INFO:scrapy.core.engine:Closing spider (finished)
+INFO:scrapy.statscollectors:Dumping Scrapy stats:
+{'downloader/request_bytes': 472,
+ 'downloader/request_count': 2,
+ 'downloader/request_method_count/GET': 2,
+ 'downloader/response_bytes': 6369,
+ 'downloader/response_count': 2,
+ 'downloader/response_status_count/200': 2,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2018, 8, 13, 7, 40, 24, 932552),
+ 'log_count/DEBUG': 3,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 7,
+ 'response_received_count': 2,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'spider_exceptions/NameError': 1,
+ 'start_time': datetime.datetime(2018, 8, 13, 7, 40, 23, 497349)}
+INFO:scrapy.core.engine:Spider closed (finished)
+INFO:scrapy.utils.log:Scrapy 1.5.0 started (bot: tutorial)
+INFO:scrapy.utils.log:Versions: lxml 4.2.1.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.0, w3lib 1.19.0, Twisted 17.5.0, Python 3.6.5 |Anaconda custom (32-bit)| (default, Mar 29 2018, 13:23:52) [MSC v.1900 32 bit (Intel)], pyOpenSSL 18.0.0 (OpenSSL 1.0.2o  27 Mar 2018), cryptography 2.2.2, Platform Windows-7-6.1.7601-SP1
+INFO:scrapy.crawler:Overridden settings: {'BOT_NAME': 'tutorial', 'NEWSPIDER_MODULE': 'tutorial.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_LOADER_WARN_ONLY': True, 'SPIDER_MODULES': ['tutorial.spiders']}
+INFO:scrapy.middleware:Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+INFO:scrapy.middleware:Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+INFO:scrapy.middleware:Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+INFO:scrapy.middleware:Enabled item pipelines:
+[]
+INFO:scrapy.core.engine:Spider opened
+INFO:scrapy.extensions.logstats:Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+DEBUG:scrapy.extensions.telnet:Telnet console listening on 127.0.0.1:6023
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.detik.com/robots.txt> (referer: None)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.detik.com/search/searchall?query=kapal+tenggelam> (referer: None)
+INFO:root:<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="initial-scale = 1.0, user-scalable = no, width=device-width, height=device-height, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<title>detiksearch</title>
+<script type="text/javascript">
+_atrk_opts = { atrk_acct:"JGO+j1a0CM00q/", domain:"detik.com",dynamic: true};
+(function() { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "https://d31qbv1cthcecs.cloudfront.net/atrk.js"; var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(as, s); })();
+</script>
+<noscript><img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=JGO+j1a0CM00q/" style="display:none" height="1" width="1" alt="" /></noscript><link href="https://cdn.detik.net.id/detik2/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+<!-- Core CSS -->
+<link rel="stylesheet" type="text/css" href="https://cdn.detik.net.id/search/css/style.css?v=1.2" />
+
+<script type="text/javascript" src="https://cdn.detik.net.id/search/js/jquery.js?v=1.2"></script>
+
+<!--S:TOPBAR-->
+			<script>
+			(function(){
+			f = 'dc', w = window, d = document;
+			w['DTKCObj'] = {ts:Date.now(),args:arguments};
+			w[f] = w[f] || function () {
+				(w[f].q = w[f].q || []).push(arguments)
+			};
+			var dc = d.createElement('script'), n = new Date();;
+			dc.async = 1;
+			dc.src = 'https://cdn.detik.net.id/libs/dc/v1/embed.js?'+n.getFullYear()+n.getMonth()+'01';
+			(d.getElementsByTagName('head')[0] ||
+			d.getElementsByTagName('body')[0]).appendChild(dc);
+			})
+		    (
+				{
+					appId:2   
+				}
+		    );
+			</script>
+<!--E:TOPBAR-->
+
+<script>
+    var APP = "https://www.detik.com/search/searchall";
+</script>
+<!-- S: (script) Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NG6BTJ');</script>
+<!-- E: (script) Google Tag Manager -->
+</head>
+    
+    <body>
+    	<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NG6BTJ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+        <div class="wrapper full">
+    <header>
+        <div class="container">
+            
+    <!-- s:logo -->
+    <div id="logo" class="fl">
+        <a href="https://www.detik.com"><img src="https://cdn.detik.net.id/search/images/logodetikcom.png?v=1.2" alt="logo detikcom"></a>
+    </div>
+    <!-- e:logo -->
+    <!-- s:menu -->
+    <nav id="menu" class="fr">
+        <ul>
+            <li class="active"><a href="https://detik.com/search/searchall?query=kapal tenggelam">All</a></li>
+            <li ><a href="https://detik.com/search/searchnews?query=kapal tenggelam">Berita</a></li>
+            <li ><a href="https://detik.com/search/searchfoto?query=kapal tenggelam">Foto</a></li>
+            <li ><a href="https://detik.com/search/searchvideo?query=kapal tenggelam">Video</a></li>
+        </ul>
+    </nav>
+    <!-- e:menu -->
+        </div>
+    </header>
+    <div class="container content">
+        <div class="mb20">
+    <div class="search-result">
+        <span class="fl text">Hasil pencarian <b>"kapal tenggelam"</b>, 3647 hasil ditemukan</span>
+        <span class="fr btn arrow">Filters </span>
+        <div class="clearfix"></div>
+    </div>
+    <div class="filter">
+        <div class="grid_row gap">
+            <div class="col_mob_7 kanal">
+                <h3>Kategori Kanal</h3>
+                <ul>
+                                        <li >
+                        <a href="https://detik.com/search/searchall?query=kapal tenggelam&sortby=time&siteid=2">detikcom (3647)</a>
+                    </li>
+                                        <li >
+                        <a href="https://detik.com/search/searchall?query=kapal tenggelam&sortby=time&siteid=3">detiknews (2823)</a>
+                    </li>
+                                        <li >
+                        <a href="https://detik.com/search/searchall?query=kapal tenggelam&sortby=time&siteid=29">detikfinance (91)</a>
+                    </li>
+                                        <li >
+                        <a href="https://detik.com/search/searchall?query=kapal tenggelam&sortby=time&siteid=21">detiksport (6)</a>
+                    </li>
+                                        <li >
+                        <a href="https://detik.com/search/searchall?query=kapal tenggelam&sortby=time&siteid=27">sepakbola (17)</a>
+                    </li>
+                                        <li >
+                        <a href="https://detik.com/search/searchall?query=kapal tenggelam&sortby=time&siteid=55">detikhealth (8)</a>
+                    </li>
+                                        <li >
+                        <a href="https://detik.com/search/searchall?query=kapal tenggelam&sortby=time&siteid=32">detikhot (23)</a>
+                    </li>
+                                        <li >
+                        <a href="https://detik.com/search/searchall?query=kapal tenggelam&sortby=time&siteid=63">wolipop (9)</a>
+                    </li>
+                                        <li >
+                        <a href="https://detik.com/search/searchall?query=kapal tenggelam&sortby=time&siteid=5">detikinet (15)</a>
+                    </li>
+                                        <li >
+                        <a href="https://detik.com/search/searchall?query=kapal tenggelam&sortby=time&siteid=35">detikfood (13)</a>
+                    </li>
+                                        <li >
+                        <a href="https://detik.com/search/searchall?query=kapal tenggelam&sortby=time&siteid=44">detikoto (4)</a>
+                    </li>
+                                        <li >
+                        <a href="https://detik.com/search/searchall?query=kapal tenggelam&sortby=time&siteid=66">detiktravel (167)</a>
+                    </li>
+                                    </ul>
+            </div>
+            <div class="col_mob_5 periode">
+                <h3>Periode Waktu</h3>
+                <ul>
+                    <li class="active"><a href="https://detik.com/search/searchall?query=kapal tenggelam&sortby=time&sorttime=0">Kapan Saja</a></li>
+                    <li ><a href="https://detik.com/search/searchall?query=kapal tenggelam&sortby=time&sorttime=0&fromdatex=13/08/2018&todatex=13/08/2018">Hari Ini</a></li>
+                    <li ><a href="https://detik.com/search/searchall?query=kapal tenggelam&sortby=time&sorttime=1&fromdatex=12/08/2018&todatex=13/08/2018">1 Hari yang Lalu</a></li>
+                    <li ><a href="https://detik.com/search/searchall?query=kapal tenggelam&sortby=time&sorttime=2&fromdatex=06/08/2018&todatex=13/08/2018">1 Minggu yang Lalu</a></li>
+                    <li ><a href="https://detik.com/search/searchall?query=kapal tenggelam&sortby=time&sorttime=3&fromdatex=13/07/2018&todatex=13/08/2018">1 Bulan yang lalu</a></li>
+                    <li class="dateform">
+                        <form method="get" action="" id="form">
+                            <input type="text" class="datepick" id="from" value="" name="fromdatex" placeholder="dd/mm/yyyy">
+                            <span>s/d</span>
+                            <input type="text" class="datepick" id="to" value="" name="todatex" placeholder="dd/mm/yyyy">
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="list media_rows list-berita">
+                                                            <article>
+    <a href="https://news.detik.com/berita/d-4162099/pencarian-korban-kapal-nelayan-bengkulu-yang-karam-dihentikan">
+        <span class="ratiobox box_thumb">
+            <span class="ratiobox_content lqd">
+                 <img src="https://akcdn.detik.net.id/community/media/visual/2018/08/09/43d092a5-7369-416d-96e5-4069f066dd8c_43.jpeg?w=250&q=" alt="Pencarian Korban Kapal Nelayan Bengkulu yang Karam Dihentikan" title="Pencarian Korban Kapal Nelayan Bengkulu yang Karam Dihentikan" class="" />            </span>
+        </span>
+        <span class="box_text">
+            <h2 class="title">Pencarian Korban Kapal Nelayan Bengkulu yang Karam Dihentikan</h2>
+            <p>Tim gabungan dari TNI AL dan Basarnas menyatakan resmi menghentikan pencarian korban KM Arung Samudera setelah melewati hari ketujuh.</p>
+            <span class="date">Minggu, 12 Agu 2018 01:28 WIB   -  <span class="category">detikNews</span></span>
+        </span>
+    </a>
+</article>
+                                                            <article>
+    <a href="https://travel.detik.com/international-destination/d-4158453/unik-dan-heboh-balapan-perahu-kardus-di-amerika">
+        <span class="ratiobox box_thumb">
+            <span class="ratiobox_content lqd">
+                 <img src="https://akcdn.detik.net.id/community/media/visual/2018/08/09/ece014f6-a06f-4d37-b4c5-8c2f6096bf09_43.jpeg?w=250&q=" alt="Unik dan Heboh, Balapan Perahu Kardus di Amerika" title="Unik dan Heboh, Balapan Perahu Kardus di Amerika" class="" />            </span>
+        </span>
+        <span class="box_text">
+            <h2 class="title">Unik dan Heboh, Balapan Perahu Kardus di Amerika</h2>
+            <p>Balap perahu layar mungkin itu sudah biasa. Kalau di Amerika, traveler ditantang balapan naik perahu kardus.</p>
+            <span class="date">Kamis, 09 Agu 2018 17:10 WIB   -  <span class="category">detikTravel</span></span>
+        </span>
+    </a>
+</article>
+                                                            <article>
+    <a href="https://news.detik.com/berita/d-4158255/4-nelayan-ini-5-hari-bertahan-hidup-di-atas-pecahan-kapal-di-laut">
+        <span class="ratiobox box_thumb">
+            <span class="ratiobox_content lqd">
+                 <img src="https://akcdn.detik.net.id/community/media/visual/2018/08/09/43d092a5-7369-416d-96e5-4069f066dd8c_43.jpeg?w=250&q=" alt="4 Nelayan Ini 5 Hari Bertahan Hidup di Atas Pecahan Kapal di Laut" title="4 Nelayan Ini 5 Hari Bertahan Hidup di Atas Pecahan Kapal di Laut" class="" />            </span>
+        </span>
+        <span class="box_text">
+            <h2 class="title">4 Nelayan Ini 5 Hari Bertahan Hidup di Atas Pecahan Kapal di Laut</h2>
+            <p>Setelah lima hari terapung-apung di lautan lepas, empat nelayan yang merupakan ABK KM Arung Samudera akhirnya ditemukan selamat. Bertaruh nyawa.</p>
+            <span class="date">Kamis, 09 Agu 2018 15:32 WIB   -  <span class="category">detikNews</span></span>
+        </span>
+    </a>
+</article>
+                                                <article class="video_tag">
+    <a href="https://20.detik.com/detikflash/20180719-180719097/kapal-rombongan-ipb-tenggelam-di-lebak-2-nyawa-melayang">
+        <div class="ratiobox ratio_16_9">
+            <span class="ratiobox_content lqd">
+                 <img src="https://akcdn.detik.net.id/community/media/visual/videoservice/AdminTV/2018/07/19/Kapal_Rombongan_IPB_Tenggelam_di_L_nSDQst2-custom.jpg?w=700" alt="Kapal Rombongan IPB Tenggelam di Lebak, 2 Nyawa Melayang" title="Kapal Rombongan IPB Tenggelam di Lebak, 2 Nyawa Melayang" class="" />            </span>
+            <span class="video-ico"></span>
+            <div class="box_text text_inside">
+                <h2 class="title">Kapal Rombongan IPB Tenggelam di Lebak, 2 Nyawa Melayang</h2>
+                <span class="date">Kamis, 19 Jul 2018 20:08 WIB   -  <span class="category">detikFlash</span></span>
+            </div>
+        </div>
+    </a>
+</article>
+                                                <article>
+    <a href="https://hot.detik.com/spotlight/d-4157875/jason-statham-korbankan-nyawa-berenang-dengan-hiu-untuk-the-meg">
+        <span class="ratiobox box_thumb">
+            <span class="ratiobox_content lqd">
+                 <img src="https://akcdn.detik.net.id/community/media/visual/2018/08/08/199c5e93-949a-4f47-8177-44906a1be00f_43.jpeg?w=250&q=" alt="Jason Statham Korbankan Nyawa Berenang dengan Hiu untuk The Meg" title="Jason Statham Korbankan Nyawa Berenang dengan Hiu untuk The Meg" class="" />            </span>
+        </span>
+        <span class="box_text">
+            <h2 class="title">Jason Statham Korbankan Nyawa Berenang dengan Hiu untuk 'The Meg'</h2>
+            <p>Pemeran Jonas Taylor, Jason Statham dalam film 'The Meg' mengungkapkan bahwa dia berenang dengan hiu sungguhan untuk mempersiapkan perannya dalam film tersebut.</p>
+            <span class="date">Kamis, 09 Agu 2018 12:55 WIB   -  <span class="category">detikHot</span></span>
+        </span>
+    </a>
+</article>
+                                                            <article>
+    <a href="https://news.detik.com/bbc-world/d-4156006/100-tahun-di-lautan-es-kapal-penjelajah-norwegia-akhirnya-kembali">
+        <span class="ratiobox box_thumb">
+            <span class="ratiobox_content lqd">
+                 <img src="https://akcdn.detik.net.id/community/media/visual/2018/08/08/8fb6d587-8467-4b4f-83cd-dea6db23d400_43.jpeg?w=250&q=" alt="100 Tahun di Lautan Es, Kapal Penjelajah Norwegia Akhirnya Kembali" title="100 Tahun di Lautan Es, Kapal Penjelajah Norwegia Akhirnya Kembali" class="" />            </span>
+        </span>
+        <span class="box_text">
+            <h2 class="title">100 Tahun di Lautan Es, Kapal Penjelajah Norwegia Akhirnya Kembali</h2>
+            <p>Setelah 100 tahun terperangkap di bawah lautan es, kapal tua milik penjelajah terkenal asal Norwegia, Roald Amundsen, akhirnya kembali ke negaranya, Norwegia.</p>
+            <span class="date">Rabu, 08 Agu 2018 14:08 WIB   -  <span class="category">detikNews</span></span>
+        </span>
+    </a>
+</article>
+                                                            <article>
+    <a href="https://news.detik.com/australia-plus-abc/d-4153986/pengalaman-warga-australia-menyelamatkan-diri-dari-gili-terawangan">
+        <span class="ratiobox box_thumb">
+            <span class="ratiobox_content lqd">
+                 <img src="https://akcdn.detik.net.id/community/media/visual/2018/08/07/08c62b1b-6038-4ff4-ba53-77a6be57f195_43.jpeg?w=250&q=" alt="Pengalaman Warga Australia Menyelamatkan Diri dari Gili Terawangan" title="Pengalaman Warga Australia Menyelamatkan Diri dari Gili Terawangan" class="" />            </span>
+        </span>
+        <span class="box_text">
+            <h2 class="title">Pengalaman Warga Australia Menyelamatkan Diri dari Gili Terawangan</h2>
+            <p>Keluarga Australia menggambarkan pengalaman mereka harus meminta-minta untuk bisa menaiki feri dari Gili Terawangan guna menyelamatkan diri dari gempa Lombok.</p>
+            <span class="date">Selasa, 07 Agu 2018 13:18 WIB   -  <span class="category">detikNews</span></span>
+        </span>
+    </a>
+</article>
+                                                                <article class="foto_tag">
+    <div class="grid_row foto_list">
+                                                <div class="col_mob_6 item">
+                <article>
+                    <a href="https://news.detik.com/readfoto/2018/07/06/202238/4102367/157/1/menhub-tabur-bunga-di-danau-toba">
+                        <div class="ratiobox ratio_4_3">
+                            <span class="ratiobox_content lqd">
+                                 <img src="https://akcdn.detik.net.id/community/media/visual/2018/07/06/3c974cd9-5491-4cfe-957e-11bf0a63e23c_43.jpeg?w=600&q=" alt="Menhub Tabur Bunga di Danau Toba" title="Menhub Tabur Bunga di Danau Toba" class="" />                            </span>
+                        </div>
+                        <div class="box_text text_inside">
+                            <h2 class="title">Menhub Tabur Bunga di Danau Toba</h2>
+                        </div>
+                    </a>
+                </article>
+            </div>
+                                                <div class="col_mob_3 item">
+                <article>
+                    <a href="https://news.detik.com/readfoto/2018/07/04/082818/4097021/157/1/penampakan-uang-rp-30-m-yang-diselamatkan-dari-km-lestari-maju">
+                        <div class="ratiobox ratio_4_3">
+                            <span class="ratiobox_content lqd">
+                                 <img src="https://akcdn.detik.net.id/community/media/visual/2018/07/04/3673ab3e-7111-4a99-a12a-16db6692d47e_43.jpeg?w=400&q=" alt="Penampakan Uang Rp 30 M yang Diselamatkan dari KM Lestari Maju" title="Penampakan Uang Rp 30 M yang Diselamatkan dari KM Lestari Maju" class="" />                            </span>
+                        </div>
+                        <div class="box_text text_inside">
+                            <h2 class="title">Penampakan Uang Rp 30 M yang Diselamatkan dari KM Lestari Maju</h2>
+                        </div>
+                    </a>
+                </article>
+            </div>
+                                                <div class="col_mob_3 item">
+                <article>
+                    <a href="https://news.detik.com/readfoto/2018/07/03/163123/4096230/157/1/raut-duka-keluarga-korban-km-sinar-bangun-saat-sar-ditutup">
+                        <div class="ratiobox ratio_4_3">
+                            <span class="ratiobox_content lqd">
+                                 <img src="https://akcdn.detik.net.id/community/media/visual/2018/07/03/6b0ecfa2-a82e-4415-8699-0553fd29ef0d_43.jpeg?w=400&q=" alt="Raut Duka Keluarga Korban KM Sinar Bangun Saat SAR Ditutup" title="Raut Duka Keluarga Korban KM Sinar Bangun Saat SAR Ditutup" class="" />                            </span>
+                        </div>
+                        <div class="box_text text_inside">
+                            <h2 class="title">Raut Duka Keluarga Korban KM Sinar Bangun Saat SAR Ditutup</h2>
+                        </div>
+                    </a>
+                </article>
+            </div>
+                                                <div class="col_mob_3 item">
+                <article>
+                    <a href="https://news.detik.com/readfoto/2018/07/03/144608/4095897/157/1/dramatis-detik-detik-km-lestari-maju-tenggelam-di-selayar">
+                        <div class="ratiobox ratio_4_3">
+                            <span class="ratiobox_content lqd">
+                                 <img src="https://akcdn.detik.net.id/community/media/visual/2018/07/03/e9067fe3-853b-4c81-9fa0-951e4823af6b_43.jpeg?w=400&q=" alt="Dramatis! Detik-detik KM Lestari Maju Tenggelam di Selayar" title="Dramatis! Detik-detik KM Lestari Maju Tenggelam di Selayar" class="" />                            </span>
+                        </div>
+                        <div class="box_text text_inside">
+                            <h2 class="title">Dramatis! Detik-detik KM Lestari Maju Tenggelam di Selayar</h2>
+                        </div>
+                    </a>
+                </article>
+            </div>
+                                                <div class="col_mob_3 item">
+                <article>
+                    <a href="https://news.detik.com/readfoto/2018/07/02/152200/4094187/157/1/duka-keluarga-korban-km-sinar-bangun-tabur-bunga-di-danau-toba">
+                        <div class="ratiobox ratio_4_3">
+                            <span class="ratiobox_content lqd">
+                                 <img src="https://akcdn.detik.net.id/community/media/visual/2018/07/02/7d4f7af4-d74a-44d2-9fd3-a904fa91a062_43.jpeg?w=400&q=" alt="Duka Keluarga Korban KM Sinar Bangun Tabur Bunga di Danau Toba" title="Duka Keluarga Korban KM Sinar Bangun Tabur Bunga di Danau Toba" class="" />                            </span>
+                        </div>
+                        <div class="box_text text_inside">
+                            <h2 class="title">Duka Keluarga Korban KM Sinar Bangun Tabur Bunga di Danau Toba</h2>
+                        </div>
+                    </a>
+                </article>
+            </div>
+            </div>
+</article>
+                                <article>
+    <a href="https://news.detik.com/berita-jawa-timur/d-4153988/nelayan-trenggalek-yang-hilang-ditemukan-tewas-terdampar">
+        <span class="ratiobox box_thumb">
+            <span class="ratiobox_content lqd">
+                 <img src="https://akcdn.detik.net.id/community/media/visual/2018/08/07/07d6b306-51ac-45b4-8b8d-2d897b00286b_43.jpeg?w=250&q=" alt="Nelayan Trenggalek yang Hilang Ditemukan Tewas Terdampar" title="Nelayan Trenggalek yang Hilang Ditemukan Tewas Terdampar" class="" />            </span>
+        </span>
+        <span class="box_text">
+            <h2 class="title">Nelayan Trenggalek yang Hilang Ditemukan Tewas Terdampar</h2>
+            <p>Seorang nelayan asal Trenggalek yang hilang terhempas ombak di laut selatan Jawa ditemukan. Korban ditemukan telah tewas terdampar di pantai.</p>
+            <span class="date">Selasa, 07 Agu 2018 13:11 WIB   -  <span class="category">detikNews</span></span>
+        </span>
+    </a>
+</article>
+                                                            <article>
+    <a href="https://news.detik.com/berita/d-4152032/kapal-nelayan-bengkulu-karam-7-abk-hilang">
+        <span class="ratiobox box_thumb">
+            <span class="ratiobox_content lqd">
+                 <img src="https://akcdn.detik.net.id/community/media/visual/2016/07/29/337afd98-fda1-48a9-9666-dbfa253c3833_43.jpg?w=250&q=" alt="Kapal Nelayan Bengkulu Karam, 7 ABK Hilang" title="Kapal Nelayan Bengkulu Karam, 7 ABK Hilang" class="" />            </span>
+        </span>
+        <span class="box_text">
+            <h2 class="title">Kapal Nelayan Bengkulu Karam, 7 ABK Hilang</h2>
+            <p>KM Arung Samudera mengalami kecelakaan Bengkulu. Dari 10 ABK, baru tiga orang yang yang ditemukan dalam keadaan selamat.</p>
+            <span class="date">Senin, 06 Agu 2018 13:09 WIB   -  <span class="category">detikNews</span></span>
+        </span>
+    </a>
+</article>
+                                                            <article>
+    <a href="https://news.detik.com/berita/d-4150873/kemudi-rusak-kapal-sembako-tenggelam-di-teluk-bone">
+        <span class="ratiobox box_thumb">
+            <span class="ratiobox_content lqd">
+                 <img src="https://akcdn.detik.net.id/community/media/visual/2018/08/05/5f52e7c7-0c5e-4bf3-a7a1-d6135550a979_43.png?w=250&q=" alt="Kemudi Rusak, Kapal Sembako Tenggelam di Teluk Bone" title="Kemudi Rusak, Kapal Sembako Tenggelam di Teluk Bone" class="" />            </span>
+        </span>
+        <span class="box_text">
+            <h2 class="title">Kemudi Rusak, Kapal Sembako Tenggelam di Teluk Bone</h2>
+            <p>KM Citra Harapan yang mengangkut barang kebutuhan sembako tujuan Kabaena, tenggelam di perairan Bajoe. Tidak ada korban jiwa dalam kecelakaan itu.</p>
+            <span class="date">Minggu, 05 Agu 2018 16:22 WIB   -  <span class="category">detikNews</span></span>
+        </span>
+    </a>
+</article>
+                    </div>
+        
+
+
+
+<div class="paging text_center">
+    
+            <a href="https://detik.com/search/searchall?query=kapal tenggelam&sortby=time&page=1" class="selected">1</a>
+            <a href="https://detik.com/search/searchall?query=kapal tenggelam&sortby=time&page=2" >2</a>
+            <a href="https://detik.com/search/searchall?query=kapal tenggelam&sortby=time&page=3" >3</a>
+            <a href="https://detik.com/search/searchall?query=kapal tenggelam&sortby=time&page=4" >4</a>
+            <a href="https://detik.com/search/searchall?query=kapal tenggelam&sortby=time&page=5" >5</a>
+    
+            <a href="https://detik.com/search/searchall?query=kapal tenggelam&sortby=time&page=2" class="last"><img src="https://cdn.detik.net.id/search/images/right-arrow.png?v=1.2" alt="Kanan"></a>
+    </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+        <footer >
+    <div class="container">
+        <div class="footer footer_ga">
+            <div class="foot1">
+                <div class="fl">
+                    <a href="https://www.detik.com">
+                        <img src="https://cdn.detik.net.id/search/images/logo_detik_footer.png?v=1.2" alt="detikcom">
+                    </a>
+                </div>
+                <div class="fr">
+                    <div class="share_bottom">
+                        <a href="https://www.facebook.com/detikcom"><img src="https://cdn.detik.net.id/search/images/foot_fb.png?v=1.2" alt="icon facebook detikcom"></a>
+                        <a href="https://twitter.com/detikcom"><img src="https://cdn.detik.net.id/search/images/foot_tw.png?v=1.2" alt="icon facebook detikcom"></a>
+                        <a href="https://plus.google.com/u/0/+detikcom"><img src="https://cdn.detik.net.id/search/images/foot_gplus.png?v=1.2" alt="icon facebook detikcom"></a>
+                        <a href="https://www.instagram.com/detikcom/"><img src="https://cdn.detik.net.id/search/images/foot_insta.png?v=1.2" alt="icon facebook detikcom"></a>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="foot2">
+                <div class="fl">
+                    Copyright @ 2017 detikcom, All right reserved &middot;
+                    <a href="https://www.detik.com/dapur/redaksi">Redaksi</a> &middot;
+                    <a href="https://www.detik.com/dapur/pedoman-media">Pedoman Media Siber</a> &middot;
+                    <a href="https://microsite.detik.com/vacancy/">Karir</a> &middot;
+                    <a href="https://www.detik.com/dapur/kotak-pos">Kotak Pos</a> &middot;
+                    <a href="https://www.detik.com/dapur/beriklan">Info Iklan</a> &middot;
+                    <a href="https://www.detik.com/dapur/privacy-policy">Privacy Policy</a> &middot;
+                    <a href="https://www.detik.com/dapur/disclaimer">Disclaimer</a><br>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix pt10"></div>
+    </div>
+</footer>
+<script type="text/javascript" src="https://cdn.detik.net.id/search/js/imgLiquid-min.js?v=1.2"></script>
+<script type="text/javascript" src="https://cdn.detik.net.id/search/js/jquery.plugin.min.js?v=1.2"></script>
+<script type="text/javascript" src="https://cdn.detik.net.id/search/js/jquery.datepick.ext.min.js?v=1.2"></script>
+<script type="text/javascript" src="https://cdn.detik.net.id/search/js/controller.js?v=1.2"></script>
+<script type="text/javascript" src="https://cdn.detik.net.id/search/js/itsearch.js?v=1.2"></script>
+    </body>
+</html>
+<!--replaced--><!---->
+INFO:scrapy.core.engine:Closing spider (finished)
+INFO:scrapy.statscollectors:Dumping Scrapy stats:
+{'downloader/request_bytes': 472,
+ 'downloader/request_count': 2,
+ 'downloader/request_method_count/GET': 2,
+ 'downloader/response_bytes': 6365,
+ 'downloader/response_count': 2,
+ 'downloader/response_status_count/200': 2,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2018, 8, 13, 7, 41, 52, 484010),
+ 'log_count/DEBUG': 3,
+ 'log_count/INFO': 8,
+ 'response_received_count': 2,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2018, 8, 13, 7, 41, 52, 156409)}
+INFO:scrapy.core.engine:Spider closed (finished)
+INFO:scrapy.utils.log:Scrapy 1.5.0 started (bot: tutorial)
+INFO:scrapy.utils.log:Versions: lxml 4.2.1.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.0, w3lib 1.19.0, Twisted 17.5.0, Python 3.6.5 |Anaconda custom (32-bit)| (default, Mar 29 2018, 13:23:52) [MSC v.1900 32 bit (Intel)], pyOpenSSL 18.0.0 (OpenSSL 1.0.2o  27 Mar 2018), cryptography 2.2.2, Platform Windows-7-6.1.7601-SP1
+INFO:scrapy.crawler:Overridden settings: {'BOT_NAME': 'tutorial', 'NEWSPIDER_MODULE': 'tutorial.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_LOADER_WARN_ONLY': True, 'SPIDER_MODULES': ['tutorial.spiders']}
+INFO:scrapy.middleware:Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+INFO:scrapy.middleware:Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+INFO:scrapy.middleware:Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+INFO:scrapy.middleware:Enabled item pipelines:
+[]
+INFO:scrapy.core.engine:Spider opened
+INFO:scrapy.extensions.logstats:Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+DEBUG:scrapy.extensions.telnet:Telnet console listening on 127.0.0.1:6023
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.detik.com/robots.txt> (referer: None)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.detik.com/search/searchall?query=kapal+tenggelam> (referer: None)
+INFO:root:['\n                                                            ', '\n                                                            ', '\n                                                            ', '\n                                                ', '\n                                                ', '\n                                                            ', '\n                                                            ', '\n                                                                ', '\n                                ', '\n                                                            ', '\n                                                            ', '\n                    ']
+INFO:scrapy.core.engine:Closing spider (finished)
+INFO:scrapy.statscollectors:Dumping Scrapy stats:
+{'downloader/request_bytes': 472,
+ 'downloader/request_count': 2,
+ 'downloader/request_method_count/GET': 2,
+ 'downloader/response_bytes': 6366,
+ 'downloader/response_count': 2,
+ 'downloader/response_status_count/200': 2,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2018, 8, 13, 7, 44, 15, 5860),
+ 'log_count/DEBUG': 3,
+ 'log_count/INFO': 8,
+ 'response_received_count': 2,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2018, 8, 13, 7, 44, 13, 664258)}
+INFO:scrapy.core.engine:Spider closed (finished)
+INFO:scrapy.utils.log:Scrapy 1.5.0 started (bot: tutorial)
+INFO:scrapy.utils.log:Versions: lxml 4.2.1.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.0, w3lib 1.19.0, Twisted 17.5.0, Python 3.6.5 |Anaconda custom (32-bit)| (default, Mar 29 2018, 13:23:52) [MSC v.1900 32 bit (Intel)], pyOpenSSL 18.0.0 (OpenSSL 1.0.2o  27 Mar 2018), cryptography 2.2.2, Platform Windows-7-6.1.7601-SP1
+INFO:scrapy.crawler:Overridden settings: {'BOT_NAME': 'tutorial', 'NEWSPIDER_MODULE': 'tutorial.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_LOADER_WARN_ONLY': True, 'SPIDER_MODULES': ['tutorial.spiders']}
+INFO:scrapy.middleware:Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+INFO:scrapy.middleware:Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+INFO:scrapy.middleware:Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+INFO:scrapy.middleware:Enabled item pipelines:
+[]
+INFO:scrapy.core.engine:Spider opened
+INFO:scrapy.extensions.logstats:Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+DEBUG:scrapy.extensions.telnet:Telnet console listening on 127.0.0.1:6023
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.detik.com/robots.txt> (referer: None)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.detik.com/search/searchall?query=kapal+tenggelam> (referer: None)
+INFO:scrapy.core.engine:Closing spider (finished)
+INFO:scrapy.statscollectors:Dumping Scrapy stats:
+{'downloader/request_bytes': 472,
+ 'downloader/request_count': 2,
+ 'downloader/request_method_count/GET': 2,
+ 'downloader/response_bytes': 6365,
+ 'downloader/response_count': 2,
+ 'downloader/response_status_count/200': 2,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2018, 8, 13, 7, 45, 36, 16803),
+ 'log_count/DEBUG': 3,
+ 'log_count/INFO': 7,
+ 'response_received_count': 2,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2018, 8, 13, 7, 45, 34, 815600)}
+INFO:scrapy.core.engine:Spider closed (finished)
+INFO:scrapy.utils.log:Scrapy 1.5.0 started (bot: tutorial)
+INFO:scrapy.utils.log:Versions: lxml 4.2.1.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.0, w3lib 1.19.0, Twisted 17.5.0, Python 3.6.5 |Anaconda custom (32-bit)| (default, Mar 29 2018, 13:23:52) [MSC v.1900 32 bit (Intel)], pyOpenSSL 18.0.0 (OpenSSL 1.0.2o  27 Mar 2018), cryptography 2.2.2, Platform Windows-7-6.1.7601-SP1
+INFO:scrapy.crawler:Overridden settings: {'BOT_NAME': 'tutorial', 'NEWSPIDER_MODULE': 'tutorial.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_LOADER_WARN_ONLY': True, 'SPIDER_MODULES': ['tutorial.spiders']}
+INFO:scrapy.middleware:Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+INFO:scrapy.middleware:Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+INFO:scrapy.middleware:Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+INFO:scrapy.middleware:Enabled item pipelines:
+[]
+INFO:scrapy.core.engine:Spider opened
+INFO:scrapy.extensions.logstats:Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+DEBUG:scrapy.extensions.telnet:Telnet console listening on 127.0.0.1:6023
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.detik.com/robots.txt> (referer: None)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.detik.com/search/searchall?query=kapal+tenggelam> (referer: None)
+INFO:scrapy.core.engine:Closing spider (finished)
+INFO:scrapy.statscollectors:Dumping Scrapy stats:
+{'downloader/request_bytes': 472,
+ 'downloader/request_count': 2,
+ 'downloader/request_method_count/GET': 2,
+ 'downloader/response_bytes': 6369,
+ 'downloader/response_count': 2,
+ 'downloader/response_status_count/200': 2,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2018, 8, 13, 7, 46, 6, 889257),
+ 'log_count/DEBUG': 3,
+ 'log_count/INFO': 7,
+ 'response_received_count': 2,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2018, 8, 13, 7, 46, 4, 861253)}
+INFO:scrapy.core.engine:Spider closed (finished)
+INFO:scrapy.utils.log:Scrapy 1.5.0 started (bot: tutorial)
+INFO:scrapy.utils.log:Versions: lxml 4.2.1.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.0, w3lib 1.19.0, Twisted 17.5.0, Python 3.6.5 |Anaconda custom (32-bit)| (default, Mar 29 2018, 13:23:52) [MSC v.1900 32 bit (Intel)], pyOpenSSL 18.0.0 (OpenSSL 1.0.2o  27 Mar 2018), cryptography 2.2.2, Platform Windows-7-6.1.7601-SP1
+INFO:scrapy.crawler:Overridden settings: {'BOT_NAME': 'tutorial', 'NEWSPIDER_MODULE': 'tutorial.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_LOADER_WARN_ONLY': True, 'SPIDER_MODULES': ['tutorial.spiders']}
+INFO:scrapy.middleware:Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+INFO:scrapy.middleware:Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+INFO:scrapy.middleware:Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+INFO:scrapy.middleware:Enabled item pipelines:
+[]
+INFO:scrapy.core.engine:Spider opened
+INFO:scrapy.extensions.logstats:Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+DEBUG:scrapy.extensions.telnet:Telnet console listening on 127.0.0.1:6023
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.detik.com/robots.txt> (referer: None)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.detik.com/search/searchall?query=kapal+tenggelam> (referer: None)
+INFO:root:['Pencarian Korban Kapal Nelayan Bengkulu yang Karam Dihentikan', 'Unik dan Heboh, Balapan Perahu Kardus di Amerika', '4 Nelayan Ini 5 Hari Bertahan Hidup di Atas Pecahan Kapal di Laut', 'Kapal Rombongan IPB Tenggelam di Lebak, 2 Nyawa Melayang', "Jason Statham Korbankan Nyawa Berenang dengan Hiu untuk 'The Meg'", '100 Tahun di Lautan Es, Kapal Penjelajah Norwegia Akhirnya Kembali', 'Pengalaman Warga Australia Menyelamatkan Diri dari Gili Terawangan', 'Menhub Tabur Bunga di Danau Toba', 'Penampakan Uang Rp 30 M yang Diselamatkan dari KM Lestari Maju', 'Raut Duka Keluarga Korban KM Sinar Bangun Saat SAR Ditutup', 'Dramatis! Detik-detik KM Lestari Maju Tenggelam di Selayar', 'Duka Keluarga Korban KM Sinar Bangun Tabur Bunga di Danau Toba', 'Nelayan Trenggalek yang Hilang Ditemukan Tewas Terdampar', 'Kapal Nelayan Bengkulu Karam, 7 ABK Hilang', 'Kemudi Rusak, Kapal Sembako Tenggelam di Teluk Bone']
+INFO:scrapy.core.engine:Closing spider (finished)
+INFO:scrapy.statscollectors:Dumping Scrapy stats:
+{'downloader/request_bytes': 472,
+ 'downloader/request_count': 2,
+ 'downloader/request_method_count/GET': 2,
+ 'downloader/response_bytes': 6365,
+ 'downloader/response_count': 2,
+ 'downloader/response_status_count/200': 2,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2018, 8, 13, 7, 46, 47, 527328),
+ 'log_count/DEBUG': 3,
+ 'log_count/INFO': 8,
+ 'response_received_count': 2,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2018, 8, 13, 7, 46, 47, 308928)}
+INFO:scrapy.core.engine:Spider closed (finished)
+INFO:scrapy.utils.log:Scrapy 1.5.0 started (bot: tutorial)
+INFO:scrapy.utils.log:Versions: lxml 4.2.1.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.0, w3lib 1.19.0, Twisted 17.5.0, Python 3.6.5 |Anaconda custom (32-bit)| (default, Mar 29 2018, 13:23:52) [MSC v.1900 32 bit (Intel)], pyOpenSSL 18.0.0 (OpenSSL 1.0.2o  27 Mar 2018), cryptography 2.2.2, Platform Windows-7-6.1.7601-SP1
+INFO:scrapy.crawler:Overridden settings: {'BOT_NAME': 'tutorial', 'NEWSPIDER_MODULE': 'tutorial.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_LOADER_WARN_ONLY': True, 'SPIDER_MODULES': ['tutorial.spiders']}
+INFO:scrapy.middleware:Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+INFO:scrapy.middleware:Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+INFO:scrapy.middleware:Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+INFO:scrapy.middleware:Enabled item pipelines:
+[]
+INFO:scrapy.core.engine:Spider opened
+INFO:scrapy.extensions.logstats:Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+DEBUG:scrapy.extensions.telnet:Telnet console listening on 127.0.0.1:6023
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.detik.com/robots.txt> (referer: None)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.detik.com/search/searchall?query=kapal+tenggelam> (referer: None)
+INFO:root:[]
+INFO:scrapy.core.engine:Closing spider (finished)
+INFO:scrapy.statscollectors:Dumping Scrapy stats:
+{'downloader/request_bytes': 472,
+ 'downloader/request_count': 2,
+ 'downloader/request_method_count/GET': 2,
+ 'downloader/response_bytes': 6369,
+ 'downloader/response_count': 2,
+ 'downloader/response_status_count/200': 2,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2018, 8, 13, 7, 55, 16, 131882),
+ 'log_count/DEBUG': 3,
+ 'log_count/INFO': 8,
+ 'response_received_count': 2,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2018, 8, 13, 7, 55, 14, 10278)}
+INFO:scrapy.core.engine:Spider closed (finished)
+INFO:scrapy.utils.log:Scrapy 1.5.0 started (bot: tutorial)
+INFO:scrapy.utils.log:Versions: lxml 4.2.1.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.0, w3lib 1.19.0, Twisted 17.5.0, Python 3.6.5 |Anaconda custom (32-bit)| (default, Mar 29 2018, 13:23:52) [MSC v.1900 32 bit (Intel)], pyOpenSSL 18.0.0 (OpenSSL 1.0.2o  27 Mar 2018), cryptography 2.2.2, Platform Windows-7-6.1.7601-SP1
+INFO:scrapy.crawler:Overridden settings: {'BOT_NAME': 'tutorial', 'NEWSPIDER_MODULE': 'tutorial.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_LOADER_WARN_ONLY': True, 'SPIDER_MODULES': ['tutorial.spiders']}
+INFO:scrapy.middleware:Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+INFO:scrapy.middleware:Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+INFO:scrapy.middleware:Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+INFO:scrapy.middleware:Enabled item pipelines:
+[]
+INFO:scrapy.core.engine:Spider opened
+INFO:scrapy.extensions.logstats:Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+DEBUG:scrapy.extensions.telnet:Telnet console listening on 127.0.0.1:6023
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.detik.com/robots.txt> (referer: None)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.detik.com/search/searchall?query=kapal+tenggelam> (referer: None)
+INFO:root:[]
+INFO:scrapy.core.engine:Closing spider (finished)
+INFO:scrapy.statscollectors:Dumping Scrapy stats:
+{'downloader/request_bytes': 472,
+ 'downloader/request_count': 2,
+ 'downloader/request_method_count/GET': 2,
+ 'downloader/response_bytes': 6369,
+ 'downloader/response_count': 2,
+ 'downloader/response_status_count/200': 2,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2018, 8, 13, 7, 59, 34, 441219),
+ 'log_count/DEBUG': 3,
+ 'log_count/INFO': 8,
+ 'response_received_count': 2,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2018, 8, 13, 7, 59, 33, 52816)}
+INFO:scrapy.core.engine:Spider closed (finished)
+INFO:scrapy.utils.log:Scrapy 1.5.0 started (bot: tutorial)
+INFO:scrapy.utils.log:Versions: lxml 4.2.1.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.0, w3lib 1.19.0, Twisted 17.5.0, Python 3.6.5 |Anaconda custom (32-bit)| (default, Mar 29 2018, 13:23:52) [MSC v.1900 32 bit (Intel)], pyOpenSSL 18.0.0 (OpenSSL 1.0.2o  27 Mar 2018), cryptography 2.2.2, Platform Windows-7-6.1.7601-SP1
+INFO:scrapy.crawler:Overridden settings: {'BOT_NAME': 'tutorial', 'NEWSPIDER_MODULE': 'tutorial.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_LOADER_WARN_ONLY': True, 'SPIDER_MODULES': ['tutorial.spiders']}
+INFO:scrapy.middleware:Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+INFO:scrapy.middleware:Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+INFO:scrapy.middleware:Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+INFO:scrapy.middleware:Enabled item pipelines:
+[]
+INFO:scrapy.core.engine:Spider opened
+INFO:scrapy.extensions.logstats:Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+DEBUG:scrapy.extensions.telnet:Telnet console listening on 127.0.0.1:6023
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.detik.com/robots.txt> (referer: None)
+DEBUG:scrapy.core.engine:Crawled (200) <GET https://www.detik.com/search/searchall?query=kapal+tenggelam> (referer: None)
+INFO:root:['https://news.detik.com/berita/d-4162099/pencarian-korban-kapal-nelayan-bengkulu-yang-karam-dihentikan', 'https://travel.detik.com/international-destination/d-4158453/unik-dan-heboh-balapan-perahu-kardus-di-amerika', 'https://news.detik.com/berita/d-4158255/4-nelayan-ini-5-hari-bertahan-hidup-di-atas-pecahan-kapal-di-laut', 'https://20.detik.com/detikflash/20180719-180719097/kapal-rombongan-ipb-tenggelam-di-lebak-2-nyawa-melayang', 'https://hot.detik.com/spotlight/d-4157875/jason-statham-korbankan-nyawa-berenang-dengan-hiu-untuk-the-meg', 'https://news.detik.com/bbc-world/d-4156006/100-tahun-di-lautan-es-kapal-penjelajah-norwegia-akhirnya-kembali', 'https://news.detik.com/australia-plus-abc/d-4153986/pengalaman-warga-australia-menyelamatkan-diri-dari-gili-terawangan', 'https://news.detik.com/readfoto/2018/07/06/202238/4102367/157/1/menhub-tabur-bunga-di-danau-toba', 'https://news.detik.com/readfoto/2018/07/04/082818/4097021/157/1/penampakan-uang-rp-30-m-yang-diselamatkan-dari-km-lestari-maju', 'https://news.detik.com/readfoto/2018/07/03/163123/4096230/157/1/raut-duka-keluarga-korban-km-sinar-bangun-saat-sar-ditutup', 'https://news.detik.com/readfoto/2018/07/03/144608/4095897/157/1/dramatis-detik-detik-km-lestari-maju-tenggelam-di-selayar', 'https://news.detik.com/readfoto/2018/07/02/152200/4094187/157/1/duka-keluarga-korban-km-sinar-bangun-tabur-bunga-di-danau-toba', 'https://news.detik.com/berita-jawa-timur/d-4153988/nelayan-trenggalek-yang-hilang-ditemukan-tewas-terdampar', 'https://news.detik.com/berita/d-4152032/kapal-nelayan-bengkulu-karam-7-abk-hilang', 'https://news.detik.com/berita/d-4150873/kemudi-rusak-kapal-sembako-tenggelam-di-teluk-bone']
+INFO:scrapy.core.engine:Closing spider (finished)
+INFO:scrapy.statscollectors:Dumping Scrapy stats:
+{'downloader/request_bytes': 472,
+ 'downloader/request_count': 2,
+ 'downloader/request_method_count/GET': 2,
+ 'downloader/response_bytes': 6365,
+ 'downloader/response_count': 2,
+ 'downloader/response_status_count/200': 2,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2018, 8, 13, 8, 0, 28, 27313),
+ 'log_count/DEBUG': 3,
+ 'log_count/INFO': 8,
+ 'response_received_count': 2,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2018, 8, 13, 8, 0, 27, 793312)}
 INFO:scrapy.core.engine:Spider closed (finished)
