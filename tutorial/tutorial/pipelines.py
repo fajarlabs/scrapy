@@ -34,6 +34,7 @@ class TutorialPipeline(object):
         # save data into database
         conn = None
         try:
+        	# filter by url & kick if duplicate
             if(item["url"] in self.register_urls):
             	return None
             # append new url to stack 
