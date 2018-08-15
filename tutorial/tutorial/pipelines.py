@@ -42,8 +42,8 @@ class TutorialPipeline(object):
             # create a cursor
             cur = conn.cursor()
             # execute a statement
-            query = "INSERT INTO scrapy_detik (date,content,url) VALUES (%s, %s, %s)"
-            data = (item["title"], item["content"], item["url"])
+            query = "INSERT INTO scrapy_detik (title,date,content,url) VALUES (%s,%s, %s, %s)"
+            data = (item["title"],item["datetime"], item["content"], item["url"])
             cur.execute(query, data)
             # commit execute
             conn.commit()
