@@ -7,6 +7,10 @@
 
 import logging
 import json
+import psycopg2
+from tutorial.spiders.postgredb import connectDbAndQuery
+from tutorial.spiders.config import config
+
 
 # config module
 logging.basicConfig(filename='example.log',level=logging.DEBUG)
@@ -22,9 +26,32 @@ class TutorialPipeline(object):
         logging.info('tutorial pipeline close spider')
 
     def process_item(self, item, spider):
-    	# save to db
-    	try :
-    		self.file.write(str(item))
-    	except Exception as e:
-    		logging.debug(str(e))
-    	return item
+        try :
+	        line = json.dumps(dict(item)) + "\n"
+	        self.file.write(line)
+        except Exception as e:
+            logging.debug(str(e))
+
+        # save data into database
+        conn = None
+        try:
+			# read connection parameters
+            params = config()
+            # connect to the PostgreSQL server
+            conn = psycopg2.connect(**params)
+            # set autocommit 
+            conn.autocommit = True
+            # create a cursor
+            cur = conn.cursor()
+            # execute a statement
+            query = "INSERT INTO scrapy_detik (date,content) VALUES (%s, %s)"
+            data = ('a', 'b')
+            cur.execute(query, data)
+            # commit execute
+            conn.commit()
+            # close connection
+            cur.close()
+        except Exception as e:
+          logging.debug(str(e))
+
+        return item

@@ -75,7 +75,7 @@ class DetikSpider(scrapy.Spider):
         content = self.filter_eschar(response.selector.xpath("//article//div//div[contains(@id, 'detikdetailtext')]/text()").extract())
         datetime = self.filter_eschar(response.selector.xpath("//article//div//div[contains(@class, 'date')]/text()").extract())
         if content != "" :
-            yield {'title':title,'content':content,'datetime':datetime,'nodes':self.nodes}
+            yield {'title':title,'content':content,'datetime':datetime,'url':''}
 
     # filter escape character
     def filter_eschar(self,content):
