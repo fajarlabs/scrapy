@@ -56,9 +56,21 @@ class DetikSpider(scrapy.Spider):
     # for parse detail news
     # get content article
     def parse_detail(self, response):
-        title = response.selector.xpath("//title/text()").extract()
-        yield {'title':str(title)}
+        title = self.filter_eschar(response.selector.xpath("//title/text()").extract())
+        content = self.filter_eschar(response.selector.xpath("//article//div//div[contains(@id, 'detikdetailtext')]/text()").extract())
+        datetime = self.filter_eschar(response.selector.xpath("//article//div//div[contains(@class, 'date')]/text()").extract())
+        if content != "" :
+            yield {'title':title,'content':content,'datetime':datetime}
 
+    # filter escape character
+    def filter_eschar(self,content):
+        if isinstance(content, list):
+            content = ' '.join(content)
+            return content.replace('\n','').replace('\t','').strip()
+        else:
+            return content.replace('\n','').replace('\t','').strip()
+
+    # filter content url
     def if_exist(self, content):
         try :
             for p in self.content_disallowed :
