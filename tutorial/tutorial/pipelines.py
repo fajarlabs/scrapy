@@ -40,7 +40,7 @@ class TutorialPipeline(object):
             # append new url to stack 
             self.register_urls.append(item["url"])
 
-			# read connection parameters
+            # read connection parameters
             params = config()
             # connect to the PostgreSQL server
             conn = psycopg2.connect(**params)
