@@ -20,6 +20,8 @@ class DetikSpider(scrapy.Spider):
 
     def __init__(self):
         self.content_disallowed = ['#','/']
+        self.nodes = 0;
+        self.max_nodes = 4
 
     # for parse first
     def parse(self, response):
@@ -41,9 +43,14 @@ class DetikSpider(scrapy.Spider):
                 # filter url yang tidak boleh diakses
                 if(self.if_exist(href) == True):
                     continue
-                
+
+                if(self.nodes > (self.max_nodes-1)):
+                    # reset nodes
+                    self.nodes = 0
+                    continue
+
                 # check if Missing scheme // is exist
-                try :
+                try :                    
                     if(href[:2] == '//'):
                         href = 'https:' + href
                     # penggunaan dont filter https://doc.scrapy.org/en/latest/topics/request-response.html
@@ -55,6 +62,8 @@ class DetikSpider(scrapy.Spider):
                         yield scrapy.Request(href, callback=self.parse, dont_filter=True)
                 except Exception as e :
                     logging.debug(str(e))
+                finally:
+                    self.nodes += 1
 
         except Exception as e :
             logging.debug(str(e))
@@ -66,7 +75,7 @@ class DetikSpider(scrapy.Spider):
         content = self.filter_eschar(response.selector.xpath("//article//div//div[contains(@id, 'detikdetailtext')]/text()").extract())
         datetime = self.filter_eschar(response.selector.xpath("//article//div//div[contains(@class, 'date')]/text()").extract())
         if content != "" :
-            yield {'title':title,'content':content,'datetime':datetime}
+            yield {'title':title,'content':content,'datetime':datetime,'nodes':self.nodes}
 
     # filter escape character
     def filter_eschar(self,content):

@@ -22,6 +22,7 @@ class TutorialPipeline(object):
         logging.info('tutorial pipeline close spider')
 
     def process_item(self, item, spider):
+    	# save to db
     	try :
     		self.file.write(str(item))
     	except Exception as e:
