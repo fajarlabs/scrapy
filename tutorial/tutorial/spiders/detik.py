@@ -4,6 +4,7 @@ from scrapy.selector import Selector
 from scrapy.http import HtmlResponse
 from scrapy import Request
 from tutorial.spiders.postgredb import connectDbAndQuery
+from urllib.parse import urlparse
 
 # import log module
 import logging
@@ -46,7 +47,12 @@ class DetikSpider(scrapy.Spider):
                     if(href[:2] == '//'):
                         href = 'https:' + href
                     # penggunaan dont filter https://doc.scrapy.org/en/latest/topics/request-response.html
-                    yield scrapy.Request(href, callback=self.parse_detail, dont_filter=True)
+                    o = urlparse(str(href))
+                    if o.path.count('/') > 2:
+                        yield scrapy.Request(href, callback=self.parse_detail, dont_filter=True)
+                    else :
+                        # call again for detail url
+                        yield scrapy.Request(href, callback=self.parse, dont_filter=True)
                 except Exception as e :
                     logging.debug(str(e))
 
