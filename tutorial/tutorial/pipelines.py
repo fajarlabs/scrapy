@@ -19,6 +19,7 @@ class TutorialPipeline(object):
 
     def open_spider(self, spider):
         self.file = open('pipeline.log', 'w')
+        self.register_urls = []
 
     def close_spider(self, spider):
         self.file.close()
@@ -33,6 +34,11 @@ class TutorialPipeline(object):
         # save data into database
         conn = None
         try:
+            if(item["url"] in self.register_urls):
+            	return None
+            # append new url to stack 
+            self.register_urls.append(item["url"])
+
 			# read connection parameters
             params = config()
             # connect to the PostgreSQL server

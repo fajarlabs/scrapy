@@ -23,6 +23,12 @@ class DetikSpider(scrapy.Spider):
         self.nodes = 0;
         self.max_nodes = 4
 
+
+    # anti duplicates
+    def start_requests(self):
+        for url in self.start_urls:
+            yield Request(url)
+
     # for parse first
     def parse(self, response):
 
