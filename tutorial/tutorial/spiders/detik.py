@@ -36,7 +36,6 @@ class DetikSpider(scrapy.Spider):
         # }
 
         try :
-            self.if_exist('hello')
             link_href = response.selector.xpath('//a/@href').extract()
             for href in link_href :
                 
@@ -53,7 +52,7 @@ class DetikSpider(scrapy.Spider):
                 try :                    
                     if(href[:2] == '//'):
                         href = 'https:' + href
-                    # penggunaan dont filter https://doc.scrapy.org/en/latest/topics/request-response.html
+                    # penggunaan dont_filter https://doc.scrapy.org/en/latest/topics/request-response.html
                     o = urlparse(str(href))
                     if o.path.count('/') > 2:
                         yield scrapy.Request(href, callback=self.parse_detail, dont_filter=True)
@@ -75,7 +74,7 @@ class DetikSpider(scrapy.Spider):
         content = self.filter_eschar(response.selector.xpath("//article//div//div[contains(@id, 'detikdetailtext')]/text()").extract())
         datetime = self.filter_eschar(response.selector.xpath("//article//div//div[contains(@class, 'date')]/text()").extract())
         if content != "" :
-            yield {'title':title,'content':content,'datetime':datetime,'url':''}
+            yield {'title':title,'content':content,'datetime':datetime,'url':str(response.request.url)}
 
     # filter escape character
     def filter_eschar(self,content):

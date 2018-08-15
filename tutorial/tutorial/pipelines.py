@@ -19,18 +19,16 @@ class TutorialPipeline(object):
 
     def open_spider(self, spider):
         self.file = open('pipeline.log', 'w')
-        logging.info('tutorial pipeline open spider')
 
     def close_spider(self, spider):
         self.file.close()
-        logging.info('tutorial pipeline close spider')
 
     def process_item(self, item, spider):
-        try :
-	        line = json.dumps(dict(item)) + "\n"
-	        self.file.write(line)
-        except Exception as e:
-            logging.debug(str(e))
+        # try :
+	       #  line = json.dumps(dict(item))
+	       #  self.file.write(json.loads(line))
+        # except Exception as e:
+        #     logging.debug(str(e))
 
         # save data into database
         conn = None
@@ -44,8 +42,8 @@ class TutorialPipeline(object):
             # create a cursor
             cur = conn.cursor()
             # execute a statement
-            query = "INSERT INTO scrapy_detik (date,content) VALUES (%s, %s)"
-            data = ('a', 'b')
+            query = "INSERT INTO scrapy_detik (date,content,url) VALUES (%s, %s, %s)"
+            data = (item["title"], item["content"], item["url"])
             cur.execute(query, data)
             # commit execute
             conn.commit()
