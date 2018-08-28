@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import scrapy
+import scrapy, sys
 from scrapy.selector import Selector
 from scrapy.http import HtmlResponse
 from scrapy import Request
@@ -20,9 +20,13 @@ class DetikSpider(scrapy.Spider):
 
     def __init__(self):
         self.content_disallowed = ['#','/']
+        # jangan di edit
         self.nodes = 0;
+        self.track = 0;
+        # titik kedalaman nodes
         self.max_nodes = 4
-
+        # titik berhenti simpul
+        self.stop_nodes = 20
 
     # anti duplicates
     def start_requests(self):
@@ -44,6 +48,10 @@ class DetikSpider(scrapy.Spider):
         try :
             link_href = response.selector.xpath('//a/@href').extract()
             for href in link_href :
+
+            	# blocking non url register
+                if self.allowed_domains[0] not in href:
+            	    continue
                 
                 # filter url yang tidak boleh diakses
                 if(self.if_exist(href) == True):
@@ -51,6 +59,14 @@ class DetikSpider(scrapy.Spider):
 
                 if(self.nodes > (self.max_nodes-1)):
                     # reset nodes
+                    if(self.track >= self.stop_nodes):
+                        # disini adalah logic untuk menghentikan crawler
+                        # ketika ini melakukan break, masih ada yang yg jalan
+                        # karena ada thread yield yang sedang memproses
+                        # dan belum sampai pada bagian logic berikut
+                        break
+                    else :
+                        self.track += 1
                     self.nodes = 0
                     continue
 
